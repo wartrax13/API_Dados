@@ -4,16 +4,6 @@ from time import sleep
 TOKEN = '1993516207:AAEcPnIUnAhbyRzugmtMxBUlxmnZpayUiOw'
 
 
-def consulta_cep(cep):
-    url = 'http://viacep.com.br/ws/%s/json/' % cep
-    response = requests.get(url)
-    # print(response.content)
-    response_json = response.json()
-    logradouro = response_json['logradouro']
-    localidade = response_json['localidade']
-    print(logradouro, localidade)
-
-
 def send_message(text, chat_id):
     url = 'https://api.telegram.org/bot{0}/sendMessage'.format(TOKEN)
     data = {'chat_id': chat_id, 'text': text}
