@@ -56,15 +56,7 @@ def send_message(text, chat_id):
 
 
 
-'''def process_message(command):
-    interaction = Interaction.objects.get(input=command)
-    # interaction = get_object_or_404(Interaction, input=command)
-    return interaction.output
-
-
-
-
-
+'''
 def get_message(update_id):
     url = 'https://api.telegram.org/bot{0}/getUpdates?offset={1}'.format(TOKEN, update_id)
     response = requests.get(url)
